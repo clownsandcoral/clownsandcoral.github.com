@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>Clownfish and Coral</title>
+
+<meta name="description" content="Clownfish and Corals, dealing in variations of clownfish breeds and coral">
+<meta name="author" content="Evan Sparkman">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google font -->
+<link href='http://fonts.googleapis.com/css?family=Average%20Sans' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="stylesheets/theme-light.css" type="text/css" media="screen" title="no title">
+<!--
+<link rel="stylesheet" href="stylesheets/theme-dark.css" type="text/css" media="screen" title="no title">
+-->
+<!--
+<link rel="stylesheet" href="stylesheets/theme-paper.css" type="text/css" media="screen" title="no title">
+-->
+
+<script >
+// iOS viewport scaling bug fix  https://gist.github.com/901295
+// Rewritten version by @mathias, @cheeaun and @jdalton
+(function(doc) {
+var addEvent = 'addEventListener',
+    type = 'gesturestart',
+    qsa = 'querySelectorAll',
+    scales = [1, 1],
+    meta = qsa in doc ? doc[qsa]('meta[name=viewport]') : [];
+function fix() {
+	meta.content = 'width=device-width,minimum-scale=' + scales[0] + ',maximum-scale=' + scales[1];
+	doc.removeEventListener(type, fix, true);
+}
+if ((meta = meta[meta.length - 1]) && addEvent in doc) {
+	fix();
+	scales = [.25, 1.6];
+	doc[addEvent](type, fix, true);
+}
+}(document));
+</script>
+
+<!-- custom modernizr build -->
+<script src="javascripts/modernizr.js"></script>
+
+<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<!-- custom js origamiSoon class -->
+<script src="javascripts/origamisoon-ck.js"></script>
+
+<!-- SETTINGS STARTS -->
+<script>
+$(document).ready(function() {
+	// init Origami'Soon
+	origamiSoon.init({
+		//enter the estimated date when your site will be ready ex. "2013/11/30, 11:13"
+		launchDate : "2013/12/24, 17:00", 
+		//labels of time units
+		labels: ["days", "hours", "mins", "secs"], 
+		//the percentage of progress, will be reclaculated if launchDate and progressCountFrom are both defined
+		progress: "55", 
+		//the moment corresponding to the value of progress, ex. "2013/01/04, 11:13"
+		progressCountFrom: "", 
+		//your twitter username, ex. "PeHaa" or "@PeHaa"
+		twitterUser : "@PeHaa", 
+		//number of recent tweets to be displayed
+		numberTweets: "3", 
+		//the message displayed inside the email input in the subscription form, has to be changed in the html body.
+		<!-- subscriptionInputMessage : "STAY TUNED ! Enter your email here.", --> 
+		//the error message if the entered email adress is not valid
+        <!-- subscriptionInputError: "Please enter a valid email.", --> 
+		//messages from the server
+		<!-- subscriptionServerMessages : ["You'll hear from us soon. Thanks.", "You've already been  on the list. Thanks.", "Sorry, we couldn't save your email."] --> 
+		});	
+});
+</script>
+<!-- SETTINGS ENDS -->
+
+
+</head>
+<!--[if lt IE 9]> <body class="ie-fix"><![endif]-->	
+<!--[if (gt IE 8)|!(IE)]><!--> <body><!--<![endif]-->
+	
+<!--- MAIN CONTAINER STARTS -->
+	<div class="wrapper">
+		
+		<!-- LOGO/SITE NAME STARTS -->
+		<!-- if you want to display the page title instead the logo, change the class="logo" to class="site-name" -->
+		<h1 id="logo" class="logo">
+			<a href="#">Origami'Soon</a>
+		</h1>
+		<!-- LOGO/SITE NAME ENDS -->
+
+		<!-- PAGE TITLE -->
+		<h2 id="title">We're Getting READY !</h2>
+		
+		<!-- PAGE DESCRIPTION STARTS -->
+		<p id="description" class="description">	
+		Our team is currently working on an awesome website. Stay tuned and get notified as soon as our service is on-line. You may also find us <a href="#">elsewhere.</a>
+		</p>
+		<!-- PAGE DESCRIPTION STARTS -->
+		
+		<!-- COUNT-DOWN STARTS -->	
+		<section id="timer"></section>
+		<!-- COUNT-DOWN ENDS -->
+		
+		
+		<!-- SOCIAL ICONS START -->
+		<section id="social">
+			<ul class="social">
+				<!-- <li><a class="icons-behance" href="#">Behance</a></li> -->
+				<li><a class="icons-dribbble" href="#">Dribbble</a></li>
+				<li><a class="icons-facebook" href="#">Facebook</a></li>
+				<!-- <li><a class="icons-flickr" href="#">Flickr</a></li> -->
+				<!-- <li><a class="icons-github" href="#">Github</a></li> -->
+				<!-- <li><a class="icons-google-plus" href="#">Google Plus</a></li> -->
+				<!-- <li><a class="icons-linkedin" href="#">Linkedin</a></li> -->
+				<!-- <li><a class="icons-pinterest" href="#">Pinterest</a></li> -->
+				<!-- <li><a class="icons-rss" href="#">RSS</a></li> -->
+				<!-- <li><a class="icons-skype" href="#">Skype</a></li> -->
+				<!-- <li><a class="icons-stumble" href="#">Stumble Upon</a></li> -->
+				<!-- <li><a class="icons-tumblr" href="#">Tumblr</a></li> -->
+				<li><a class="icons-twitter" href="#">Twitter</a></li>
+			</ul>
+		</section>
+		<!-- SOCIAL ICONS END -->
+		
+		
+		<!-- FOOTER STARTS -->
+		<footer id="footer">	
+			<p class="copyright">Copyright &copy; 2013 <a href="#">Origami'Soon.</a> All rights reserved.</p>
+		</footer>
+		<!-- FOOTER ENDS -->
+	
+	</div>
+<!--- MAIN CONTAINER ENDS -->	
+</body>
+</html>
