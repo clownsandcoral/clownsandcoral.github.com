@@ -1,0 +1,734 @@
+/* custom reset based on :
+/* normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
+
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block; }
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif; }
+
+body {
+  margin: 0; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:hover,
+a:active {
+  outline: 0; }
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0; }
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0; }
+
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0; }
+
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0; }
+
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0; }
+
+h1, h2, h3, h4 {font-weight:normal}
+
+p {
+  margin: 0; }
+
+dl,
+menu,
+ol,
+ul {
+  margin: 0; }
+
+dd {
+  margin: 0 0 0 40px; }
+
+menu,
+ol,
+ul {
+  padding: 0 0 0 0; }
+
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none; }
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic; }
+
+form {
+  margin: 0; }
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0; }
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle; }
+
+button,
+input {
+  line-height: normal; }
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible; }
+
+button[disabled],
+input[disabled] {
+  cursor: default; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/*-----layout styles--------*/
+body {
+  font-family: "Average Sans", sans-serif;
+  font-size: 1em;
+  padding-top: 2em; }
+
+a {
+  text-decoration: none; }
+
+a.more {
+  text-decoration: underline; }
+
+:focus {
+  outline: none; }
+
+ul li {
+  list-style: none; }
+
+.wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 0.5em; }
+
+section {
+  margin: 1.5em auto; }
+
+h1, h2, h3 {
+  text-align: center;
+  font-weight: normal; }
+
+/*-----your logo----------*/
+/* enter the dimensions : width and height of your logo */
+/* if you want a crispy retina look make sure to add a logo@2x.png that is double size*/
+h1.logo a {
+  display: inline-block;
+  width: 218px;
+  height: 34px;
+  text-indent: -9999px;
+  background: url(../images/logo.png) no-repeat;
+  background-size: cover; }
+
+.description {
+  font-size: 1.2em;
+  padding: 1em; }
+
+h1.site-name {
+  font-size: 3em; }
+
+h2 {
+  font-size: 2.25em; }
+
+/*-------------------------------------------------------------------*/
+/*---------------------- timer layout -------------------------------*/
+/*-------------------------------------------------------------------*/
+#timer {
+  text-align: center;
+  font-size: 1em;
+  position: relative;
+  padding-bottom: 25%; }
+  #timer > div {
+    position: absolute;
+    width: 35%;
+    padding-bottom: 25%; }
+  #timer p {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 15%;
+    line-height: 1;
+    bottom: 0; }
+  #timer .days {
+    left: 0;
+    top: 0; }
+  #timer .hours {
+    margin-left: -0.625em;
+    left: 35%;
+    margin-top: 0.375em;
+    width: 30%;
+    padding-right: 1.25em;
+    padding-left: 0.625em; }
+  #timer .min-sec {
+    right: 0;
+    margin-top: -0.625em; }
+  #timer .minutes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; }
+  #timer .seconds {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 35%;
+    overflow: hidden; }
+  #timer > div:before, #timer .seconds:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-style: solid;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: scale(0.9999); }
+  #timer .days:before {
+    left: 0;
+    top: -0.5em;
+    border-width: 0 0 0.5em 2.5em; }
+  #timer .hours:before {
+    left: 0;
+    top: -0.375em;
+    border-width: 0 0 0.375em 0.625em; }
+  #timer .min-sec:before {
+    left: 0;
+    top: 0;
+    border-width: 1em 0 0 1.25em; }
+  #timer .seconds:after {
+    right: 0;
+    border-width: 0 0 360px 160px; }
+  #timer > div:after {
+    content: "";
+    position: absolute;
+    width: 85%;
+    left: 7.5%;
+    height: 20px;
+    bottom: 10px;
+    border-radius: 0%;
+    z-index: -2; }
+  #timer .seconds p {
+    z-index: 1;
+    font-size: .40em;
+    bottom: 5px;
+    top: auto;
+    margin-left: 25%; }
+
+#timer p {
+  text-transform: uppercase; }
+  #timer p span {
+    font-size: 2.5em; }
+
+/*-------------------------------------------------------------------*/
+/*---------------------- social links -------------------------------*/
+/*-------------------------------------------------------------------*/
+.social {
+  display: block;
+  text-align: center; }
+  .social li {
+    display: inline; }
+    .social li a {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      display: inline-block;
+      margin: mypx2em(2px);
+      background-image: url('../images/icons-s110a511ec9.png');
+      height: 48px;
+      width: 48px;
+      background-size: 48px 624px; }
+      @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+        .social li a {
+          background-image: url('../images/icons2x-s612f50bbe7.png'); } }
+      .social li a.icons-behance {
+        background-position: 0 -432px; }
+      .social li a.icons-dribbble {
+        background-position: 0 0; }
+      .social li a.icons-facebook {
+        background-position: 0 -240px; }
+      .social li a.icons-flickr {
+        background-position: 0 -576px; }
+      .social li a.icons-github {
+        background-position: 0 -48px; }
+      .social li a.icons-google-plus {
+        background-position: 0 -192px; }
+      .social li a.icons-linkedin {
+        background-position: 0 -480px; }
+      .social li a.icons-pinterest {
+        background-position: 0 -336px; }
+      .social li a.icons-rss {
+        background-position: 0 -384px; }
+      .social li a.icons-skype {
+        background-position: 0 -96px; }
+      .social li a.icons-stumble {
+        background-position: 0 -288px; }
+      .social li a.icons-tumblr {
+        background-position: 0 -528px; }
+      .social li a.icons-twitter {
+        background-position: 0 -144px; }
+      @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+        .social li a.icons-facebook {
+          background-position: 0 -384px; }
+        .social li a.icons-pinterest {
+          background-position: 0 -288px; }
+        .social li a.icons-rss {
+          background-position: 0 -240px; }
+        .social li a.icons-stumble {
+          background-position: 0 -336px; } }
+
+.social li a:hover {
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3); }
+
+/*-------------------------------------------------------------------*/
+/*---------------------- subscription form --------------------------*/
+/*-------------------------------------------------------------------*/
+.subscription {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative; }
+
+.subscription form .content {
+  padding: 1.25em;
+  border-radius: 5px; }
+
+/*----- error message -------*/
+.subscription form p {
+  font-size: .75em;
+  margin-bottom: .25em; }
+
+.subscription form input {
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 1em;
+  border: none; }
+
+input[type="email"] {
+  width: 100%;
+  border: none; }
+
+input[type="submit"] {
+  width: 100%;
+  font-family: "Average Sans", sans-serif;
+  text-transform: uppercase;
+  margin-top: 1.25em;
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.14) 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.14)));
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.14) 100%);
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.14) 100%);
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.14) 100%);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.14) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#24000000',GradientType=0 ); }
+
+::-webkit-input-placeholder {
+  font-family: "Average Sans", sans-serif; }
+
+:-moz-placeholder {
+  font-family: "Average Sans", sans-serif; }
+
+#plane {
+  position: absolute;
+  bottom: -60px;
+  right: 10px;
+  height: 91px;
+  width: 74px;
+  background-size: cover;
+  z-index: 1;
+  pointer-events: none;
+  -webkit-animation: drift 5s ease-out infinite alternate;
+  -moz-animation: drift 5s ease-out infinite alternate;
+  animation: drift 5s ease-out infinite alternate; }
+
+@-webkit-keyframes drift {
+  50% {
+    bottom: -75px;
+    right: 15px; } }
+
+@-moz-keyframes drift {
+  50% {
+    bottom: -75px;
+    right: 15px; } }
+
+@keyframes drift {
+  50% {
+    bottom: -75px;
+    right: 15px; } }
+
+/*------ response from the server --------*/
+#note {
+  text-align: center;
+  width: 65%;
+  margin: 0 auto 1em;
+  font-size: 1.5em; }
+
+/*-------------------------------------------------------------------*/
+/*---------------------- latest tweets ------------------------------*/
+/*-------------------------------------------------------------------*/
+.tweets {
+  position: relative;
+  display: block;
+  padding: 1.25em;
+  border-radius: 5px; }
+
+.tweets li {
+  padding: 0.625em 1.25em; }
+
+.tweets li {
+  border-top: 1px dashed #f6f6f6; }
+  .tweets li:first-child {
+    border-top: none; }
+
+#bird {
+  position: absolute;
+  width: 65px;
+  height: 88px;
+  background: url(../images/bird.png);
+  pointer-events: none;
+  top: -15px;
+  background-size: cover;
+  -webkit-animation: bird 3s ease-out infinite alternate;
+  -moz-animation: bird 3s ease-out infinite alternate;
+  animation: bird 3s ease-out infinite; }
+
+@-webkit-keyframes bird {
+  50% {
+    top: -35px;
+    left: 5px; } }
+
+@-moz-keyframes bird {
+  50% {
+    top: -35px;
+    left: 5px; } }
+
+@keyframes bird {
+  50% {
+    top: -35px;
+    left: 5px; } }
+
+/*-------------------------------------------------------------------*/
+/*---------------------- footer -------------------------------------*/
+/*-------------------------------------------------------------------*/
+footer {
+  text-align: center;
+  margin-top: 3.125em;
+  padding: 1.25em 0;
+  font-size: .75em; }
+
+/*-------------------------------------------------------------------*/
+/*---------------------- progress bar -------------------------------*/
+/*-------------------------------------------------------------------*/
+#progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.5em;
+  width: 0%; }
+  #progress-bar span {
+    position: absolute;
+    right: 6px;
+    top: 0;
+    line-height: 1.5em; }
+
+/*-------------------------------------------------------------------*/
+/*---------------------- larger screens ------------------------------*/
+/*-------------------------------------------------------------------*/
+@media only screen and (min-width: 30em) {
+  .subscription form .content {
+    overflow: hidden; }
+
+  .subscription form input {
+    display: block; }
+
+  .subscription input[type="email"] {
+    display: block;
+    width: 70%;
+    float: left; }
+
+  .subscription input[type="submit"] {
+    width: 25%;
+    float: right;
+    margin-top: 0; }
+
+  #timer {
+    font-size: 1.5em; } }
+@media only screen and (min-width: 40.625em) {
+  #timer .seconds p {
+    bottom: 1em;
+    top: auto;
+    right: 1em;
+    left: auto;
+    text-align: right; } }
+@media only screen and (min-width: 48em) {
+  #timer p {
+    top: 25%; } }
+@media only screen and (min-width: 59.375em) {
+  #plane {
+    height: 182px;
+    width: 148px;
+    right: -65px;
+    bottom: -155px;
+    -webkit-animation: drift1 5s ease-out infinite alternate;
+    -moz-animation: drift1 5s ease-out infinite alternate;
+    animation: drift1 5s ease-out infinite alternate; }
+
+  #bird {
+    width: 130px;
+    height: 176px;
+    left: -65px;
+    top: -40px;
+    -webkit-animation: bird1 3s ease-out infinite alternate;
+    -moz-animation: bird1 3s ease-out infinite alternate;
+    animation: bird1 3s ease-out infinite alternate; } }
+@media only screen and (min-width: 100em) {
+  body {
+    font-size: 1.25em; }
+
+  #timer {
+    font-size: 1.6em; }
+
+  #timer p {
+    top: 15%; } }
+@-webkit-keyframes drift1 {
+  50% {
+    bottom: -185px;
+    right: -85px; } }
+
+@-moz-keyframes drift1 {
+  50% {
+    bottom: -195px;
+    right: -85px; } }
+
+@keyframes drift1 {
+  50% {
+    bottom: -195px;
+    right: -85px; } }
+
+@-webkit-keyframes bird1 {
+  50% {
+    top: -65px;
+    left: -85px; } }
+
+@-moz-keyframes bird1 {
+  50% {
+    top: -65px;
+    left: -85px; } }
+
+@keyframes bird1 {
+  50% {
+    top: -65px;
+    left: -85px; } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  html {background-size: 800px 517px; }
+}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 59.375em), only screen and (min--moz-device-pixel-ratio: 1.5) and (min-width: 59.375em), only screen and (min-device-pixel-ratio: 1.5) and (min-width: 59.375em) {
+  #bird {
+    background-image: url(../images/bird@2x.png); }
+}
+
+/*-----------------------------------------------------------------------------------------------------------*/
+/*---------------------- colors & background images - theme specific settings -------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------*/
+
+
+
+
+html {
+  background: black url(../images/bg8black.png) center top repeat; }
+
+body {
+  color: #c7d5d9;
+  font-family: "Average Sans", sans-serif; }
+
+a {
+  color: #76a0b2; }
+
+a:hover {
+  color: #24a9cd; }
+
+h1.logo a {
+  background-image: url(../images/logo_white.png); }
+
+h2 {
+  color: #76818c;
+  text-shadow: 0 1px 0 black; }
+
+/*-------timer colors -------------------------*/
+#timer {
+  color: #fff; }
+  #timer .days {
+    background: #474e55; }
+  #timer .hours {
+    background: #5e6871; }
+  #timer .minutes {
+    background: #474e55; }
+  #timer .days:before {
+    border-color: transparent transparent #303539 transparent; }
+  #timer .hours:before {
+    border-color: transparent transparent #191b1d transparent; }
+  #timer .min-sec:before {
+    border-color: transparent transparent transparent #303539; }
+  #timer .seconds:after {
+    border-color: transparent transparent #4e565d transparent; }
+  #timer > div:after {
+    box-shadow: 0 5px 10px 10px black; }
+
+/*-------subscription form colors -------------------------*/
+.subscription form .content {
+  background: #f3f3f3;
+  box-shadow: 0 2px 6px -2px black; }
+
+.no-boxshadow .subscription form .content {
+  border: 1px solid #76818c; }
+
+:-moz-placeholder {
+  color: #4f4f4f;
+  font-family: "Average Sans", sans-serif; }
+
+::-webkit-input-placeholder {
+  color: #4f4f4f;
+  font-family: "Average Sans", sans-serif; }
+
+#plane {
+  background-image: url(../images/mail_grey.png); }
+
+.subscription form p {
+  color: #d27f7f; }
+
+input[type="email"] {
+  background: #dddddd;
+  color: #4f4f4f; }
+  input[type="email"]:focus {
+    background: #dddddd; }
+  input[type="email"].error {
+    background: #d27f7f; }
+
+input[type="submit"] {
+  background-color: #78a8b5;
+  color: #fff;
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.15); }
+
+input[type="submit"]:hover {
+  background-color: #689dac; }
+
+/*-------latest tweets colors -------------------------*/
+.tweets {
+  background: #f3f3f3;
+  color: #4f4f4f;
+  box-shadow: 0 2px 8px -3px black; }
+
+.no-boxshadow .tweets {
+  border: 1px solid #76818c; }
+
+.tweets li {
+  border-top: 1px dashed #dddddd; }
+  .tweets li:first-child {
+    border-top: none; }
+
+/*-------progress bar colors -------------------------*/
+#progress-bar {
+  background: #78a8b5; }
+  #progress-bar span {
+    color: #fff; }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  h1.logo a {
+    background-image: url(../images/logo_white@2x.png); }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 59.375em), only screen and (min--moz-device-pixel-ratio: 1.5) and (min-width: 59.375em), only screen and (min-device-pixel-ratio: 1.5) and (min-width: 59.375em) {
+  #plane {
+    background-image: url(../images/mail_grey@2x.png); }
+}
+
+
+/*-------------------------------------------------------------------*/
+/* IE8 fix --------------------------------------------------------------------------- */
+/*-------------------------------------------------------------------*/
+.ie-fix .wrapper {
+  width: 650px; }
+
+.ie-fix #timer {
+  font-size: 1.75em; }
+
+.ie-fix #timer {
+  padding-bottom: 165px; }
+
+.ie-fix .subscription form .content {
+  overflow: hidden; }
+
+.ie-fix .subscription form input {
+  display: block; }
+
+.ie-fix .subscription input[type="email"] {
+  display: block;
+  width: 70%;
+  float: left; }
+
+.ie-fix .subscription input[type="submit"] {
+  width: 25%;
+  float: right;
+  margin-top: 0; }
+
+.ie-fix #plane {
+  height: 182px;
+  width: 148px;
+  right: -65px;
+  bottom: -155px; }
+
+.ie-fix #bird {
+  width: 130px;
+  height: 176px;
+  left: -65px;
+  top: -40px; }
